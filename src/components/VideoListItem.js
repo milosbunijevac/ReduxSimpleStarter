@@ -8,6 +8,7 @@ class VideoListItem extends React.Component {
   render() {
     return(
       <div>
+        <li>Video</li>
       </div>
     )
   }

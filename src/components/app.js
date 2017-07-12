@@ -3,7 +3,8 @@ import { devToolsEnhancer } from 'redux-devtools-extension';
 import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import BookList from '../containers/book-list.js';
-import BookReducer from '../reducers/reducer_books.js';
+import BookDetail from '../containers/book-detail.js';
+import BookReducer from '../reducers/index.js';
 
 
 export default class App extends Component {
@@ -14,6 +15,7 @@ export default class App extends Component {
     return ( 
       <div> 
         <BookList />
+        <BookDetail />
       </div>
     );
   }

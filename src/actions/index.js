@@ -7,11 +7,11 @@ const API_KEY = '7c9489c275c2ae169fdb6e91120a9104';
 export const FETCH_WEATHER = 'FETCH_WEATHER';
 
 export function fetchWeather(ZIP_CODE) {
-  const ROOT_URL = `api.openweathermap.org/data/2.5/weather?zip=${ZIP_CODE},us&appid=${API_KEY}`;
+  const ROOT_URL = `http://api.openweathermap.org/data/2.5/weather?zip=${ZIP_CODE},us&appid=${API_KEY}`;
   const request = axios.get(ROOT_URL);
+  console.log('Request: ', request);
   return {
     type: FETCH_WEATHER,
     payload: request
   }
-
 }
